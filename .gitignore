@@ -1,8 +1,26 @@
-cat >> .gitignore <<'EOF'
+# Environment variables and local secrets
 .env
 .env.*
 !.env.example
-.venv/
-**/.venv/
+
+# Python
 __pycache__/
-**/__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtual environments and tooling
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local OS/editor files
+.DS_Store
+.vscode/
+
+# HireMeAI private/generated resume data
+**/parsed_resume.json
+**/FaizanKhan1*.pdf
